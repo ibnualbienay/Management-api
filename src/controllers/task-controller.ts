@@ -51,7 +51,6 @@ export class TaskController {
 
     createTask = async (req: Request, res: Response) => {
         const { title, description, status } = req.body;
-
         if (!title || !description) {
             return res.status(400).json({
                 status: "false",
